@@ -3,7 +3,8 @@ type ToBeOrNotToBe = {
     notToBe: (val: any) => boolean;
 };
 
-function expectTS(val: any): ToBeOrNotToBe {
+//@ts-ignore
+function expect(val: any): ToBeOrNotToBe {
     return{
         toBe(val2){
             if(val === val2) return true;
